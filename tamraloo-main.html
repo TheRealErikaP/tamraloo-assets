@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Tamraloo Studios | Music, Dance, Theatre &amp; Tutoring in Lincoln CA</title>
+<meta name="description" content="Tamraloo Studios in Lincoln CA — music lessons, dance classes, theatre programs, and academic tutoring for all ages in Placer County.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+:root{
+  --cream:#faf7f4;--ink:#1a1520;--mid:#2d2535;
+  --tm:#5a4e5f;--tl:#8a7a8f;
+  --blue:#4285b2;--mag:#c8007d;--or:#e19632;--gold:#e1af4b;--green:#4b9632;
+  --bd:rgba(26,21,32,0.09);
+  --dp:'Playfair Display',Georgia,serif;
+  --bd2:'Plus Jakarta Sans',system-ui,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--bd2);background:transparent;color:var(--ink);-webkit-font-smoothing:antialiased;}
+
+html{scroll-behavior:smooth;}
+a{color:inherit;}
+/* ── HERO ────────────────────────────────────────────── */
+.hero {
+  background: var(--ink);
+  padding: 80px 32px 72px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 20% 0%, rgba(200,0,125,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 80% 100%, rgba(66,133,178,0.1) 0%, transparent 55%);
+  pointer-events: none;
+}
+.hero-eyebrow {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  display: block;
+  position: relative;
+}
+.hero-h1 {
+  font-family: var(--dp);
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.05;
+  margin-bottom: 20px;
+  position: relative;
+  letter-spacing: -0.02em;
+}
+.hero-h1 em {
+  font-style: italic;
+  font-weight: 700;
+  color: var(--gold);
+}
+.hero-sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.55);
+  max-width: 560px;
+  margin: 0 auto 36px;
+  line-height: 1.75;
+  position: relative;
+  font-weight: 300;
+}
+.hero-btns {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 56px;
+}
+.btn-primary {
+  background: var(--mag);
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 15px 32px;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: opacity 0.15s;
+  display: inline-block;
+}
+.btn-primary:hover { opacity: 0.88; }
+.btn-ghost {
+  background: transparent;
+  color: rgba(255,255,255,0.75);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: 3px;
+  text-decoration: none;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  transition: border-color 0.15s, color 0.15s;
+  display: inline-block;
+}
+.btn-ghost:hover { border-color: rgba(255,255,255,0.5); color: #fff; }
+
+/* Awards bar */
+.awards-bar {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  position: relative;
+}
+.award-item {
+  text-align: center;
+}
+.award-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 3px;
+}
+.award-name {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.45);
+  font-weight: 400;
+}
+
+
+
+/* ── SUMMER BAND ─────────────────────────────────────── */
+.summer-band {
+  background: var(--ink);
+  padding: 64px 32px;
+  position: relative;
+  overflow: hidden;
+}
+.summer-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 100% at 100% 50%, rgba(200,0,125,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+.summer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  align-items: center;
+  position: relative;
+}
+.summer-text {}
+.summer-eyebrow {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 12px;
+}
+.summer-h2 {
+  font-family: var(--dp);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+.summer-h2 em { font-style: italic; color: var(--gold); }
+.summer-sub {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.75;
+  margin-bottom: 24px;
+  font-weight: 300;
+}
+.summer-offerings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.summer-offer {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 4px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+}
+.summer-offer:hover { background: rgba(255,255,255,0.09); border-color: rgba(255,255,255,0.18); }
+.summer-offer-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.summer-offer-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #fff;
+  display: block;
+  margin-bottom: 1px;
+}
+.summer-offer-detail {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.4);
+  font-weight: 400;
+}
+.summer-offer-arr {
+  margin-left: auto;
+  color: rgba(255,255,255,0.25);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+/* ── TRUST BAND ──────────────────────────────────────── */
+.trust-band {
+  background: var(--cream);
+  border-top: 1px solid var(--bd);
+  border-bottom: 1px solid var(--bd);
+  padding: 40px 32px;
+}
+.trust-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+}
+.trust-stat {
+  flex: 1;
+  text-align: center;
+  padding: 20px 24px;
+  border-right: 1px solid var(--bd);
+}
+.trust-stat:last-child { border-right: none; }
+.trust-num {
+  font-family: var(--dp);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--ink);
+  display: block;
+  line-height: 1;
+  margin-bottom: 6px;
+  letter-spacing: -0.02em;
+}
+.trust-label {
+  font-size: 0.72rem;
+  color: var(--tl);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ── WHY TAMRALOO ────────────────────────────────────── */
+.why-section {
+  padding: 80px 32px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.why-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.section-eyebrow {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--mag);
+  display: block;
+  margin-bottom: 12px;
+}
+.section-h2 {
+  font-family: var(--dp);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.why-card {
+  padding: 32px 28px;
+  background: #fff;
+  border: 1px solid var(--bd);
+  border-radius: 4px;
+}
+.why-card-icon {
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+  display: block;
+}
+.why-card h3 {
+  font-family: var(--dp);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.why-card p {
+  font-size: 0.82rem;
+  color: var(--tm);
+  line-height: 1.75;
+}
+
+/* ── LOCATION + CTA ──────────────────────────────────── */
+.location-cta {
+  background: var(--mid);
+  padding: 72px 32px;
+  position: relative;
+  overflow: hidden;
+}
+.location-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 60% 80% at 10% 50%, rgba(200,0,125,0.1) 0%, transparent 55%);
+  pointer-events: none;
+}
+.location-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+  position: relative;
+}
+.location-text h2 {
+  font-family: var(--dp);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+  line-height: 1.15;
+}
+.location-text p {
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.75;
+  margin-bottom: 28px;
+  font-weight: 300;
+}
+.location-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.location-detail {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+}
+.location-detail a {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-weight: 500;
+}
+.location-detail a:hover { color: #fff; }
+.location-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.free-lesson-card {
+  background: var(--ink);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 6px;
+  padding: 40px 36px;
+  text-align: center;
+}
+.free-lesson-card h3 {
+  font-family: var(--dp);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.free-lesson-card p {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+.free-lesson-card .btn-primary {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 16px;
+}
+.free-lesson-card .note {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.25);
+  margin-top: 12px;
+}
+
+
+/* ── RESPONSIVE ──────────────────────────────────────── */
+@media (max-width: 1000px) {
+  .pillars-grid { grid-template-columns: 1fr 1fr; }
+  .pillar { border-bottom: 1px solid var(--bd); }
+  .pillar:nth-child(2n) { border-right: none; }
+  .summer-inner { grid-template-columns: 1fr; gap: 40px; }
+  .why-grid { grid-template-columns: 1fr 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr; gap: 28px; }
+  .trust-inner { flex-wrap: wrap; }
+  .trust-stat { flex: 1 1 45%; min-width: 140px; }
+}
+@media (max-width: 700px) {
+  .site-nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .nav-cta { display: none; }
+  .nav-burger { display: flex; }
+  .hero { padding: 56px 20px 52px; }
+  .pillars-grid { grid-template-columns: 1fr; }
+  .pillar:nth-child(2n) { border-right: 1px solid var(--bd); }
+  .pillar { border-right: none; }
+  .why-grid { grid-template-columns: 1fr; }
+  .location-inner { grid-template-columns: 1fr; gap: 40px; }
+  .location-cta { padding: 56px 20px; }
+  .summer-band { padding: 52px 20px; }
+  .trust-stat { flex: 1 1 100%; border-right: none; border-bottom: 1px solid var(--bd); }
+  .trust-stat:last-child { border-bottom: none; }
+  .footer-top { grid-template-columns: 1fr; }
+  .why-section { padding: 56px 20px; }
+}
+
+
+/* ── HOVER IMAGE PILLARS ───────────────────── */
+.pillars-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;min-height:520px;}
+.pillar{position:relative;overflow:hidden;cursor:pointer;display:block;text-decoration:none;}
+.pillar-bg{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+  transition:transform 0.55s cubic-bezier(0.25,0.46,0.45,0.94);
+  will-change:transform;
+}
+.pillar:hover .pillar-bg{transform:scale(1.06);}
+.pillar-overlay{
+  position:absolute;inset:0;
+  background:linear-gradient(to top, rgba(26,21,32,0.92) 0%, rgba(26,21,32,0.45) 50%, rgba(26,21,32,0.1) 100%);
+  transition:background 0.35s ease;
+}
+.pillar:hover .pillar-overlay{background:linear-gradient(to top, rgba(26,21,32,0.97) 0%, rgba(26,21,32,0.75) 50%, rgba(26,21,32,0.5) 100%);}
+.pillar-accent{position:absolute;top:0;left:0;right:0;height:4px;z-index:2;}
+.pillar-content{
+  position:absolute;inset:0;
+  display:flex;flex-direction:column;justify-content:flex-start;align-items:flex-end;
+  padding:32px 28px;z-index:2;
+  text-align:right;
+}
+
+.pillar:hover 
+
+.pillar-name{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:1.55rem;font-weight:700;color:#fff;
+  line-height:1.1;margin-bottom:10px;
+  text-shadow:0 2px 8px rgba(0,0,0,0.4);
+  text-align:right;
+}
+.pillar-desc{
+  font-size:0.8rem;color:rgba(255,255,255,0.75);line-height:1.7;
+  margin-bottom:16px;
+  opacity:0;transform:translateY(10px);
+  transition:opacity 0.35s ease 0.05s, transform 0.35s ease 0.05s;
+  max-width:220px;text-align:right;
+}
+.pillar:hover .pillar-desc{opacity:1;transform:translateY(0);}
+.pillar-programs-hover{
+  display:flex;flex-wrap:wrap;gap:5px;margin-bottom:16px;justify-content:flex-end;
+  opacity:0;transform:translateY(8px);
+  transition:opacity 0.35s ease 0.1s, transform 0.35s ease 0.1s;
+}
+.pillar:hover .pillar-programs-hover{opacity:1;transform:translateY(0);}
+.prog-pill{
+  font-size:0.65rem;font-weight:600;
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.2);
+  color:rgba(255,255,255,0.85);
+  padding:3px 10px;border-radius:100px;
+  white-space:nowrap;
+}
+.pillar-cta-hover{
+  font-size:0.72rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;
+  color:#fff;display:inline-flex;align-items:center;gap:6px;justify-content:flex-end;
+  opacity:0;transform:translateY(6px);
+  transition:opacity 0.35s ease 0.15s, transform 0.35s ease 0.15s;
+}
+.pillar:hover .pillar-cta-hover{opacity:1;transform:translateY(0);}
+.pillar-cta-hover::after{content:'→';transition:transform 0.2s;}
+.pillar:hover .pillar-cta-hover::after{transform:translateX(4px);}
+
+/* placeholder bg colors until real images drop in */
+.pillar.music .pillar-bg{background-image:url('https://therealerikap.github.io/tamraloo-assets/two-students-playing-cellos-during-music.jpg');background-color:#1a1520;}
+.pillar.dance .pillar-bg{background-image:url('https://therealerikap.github.io/tamraloo-assets/large-group-of-young-people-on.jpeg');background-color:#1a1520;}
+.pillar.theatre .pillar-bg{background-image:url('https://therealerikap.github.io/tamraloo-assets/saxophone-player-performing-on-stage-in.jpeg');background-color:#1a1520;}
+.pillar.tutoring .pillar-bg{background-image:url('https://therealerikap.github.io/tamraloo-assets/teacher-working-one-on-one-with-student-in.png');background-color:#1a1520;}
+
+@media(max-width:1000px){
+  .pillars-grid{grid-template-columns:1fr 1fr;}
+  .pillar{min-height:300px;}
+}
+@media(max-width:600px){
+  .pillars-grid{grid-template-columns:1fr;}
+  .pillar{min-height:260px;}
+  .pillar-desc{opacity:1;transform:none;}
+  .pillar-programs-hover{opacity:1;transform:none;}
+  .pillar-cta-hover{opacity:1;transform:none;}
+}
+
+
+/* ── HERO ROTATING BG ──────────────────────── */
+.hero{position:relative;}
+.hero-slides{position:absolute;inset:0;z-index:0;}
+.hero-slide{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center;
+  opacity:0;
+  transition:opacity 1.2s ease-in-out;
+}
+.hero-slide.active{opacity:1;}
+.hero::before{z-index:1;}
+.hero-eyebrow,.hero-h1,.hero-sub,.hero-btns,.awards-bar{position:relative;z-index:2;}
+/* dark overlay on slides */
+.hero-slides::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to bottom, rgba(26,21,32,0.55) 0%, rgba(26,21,32,0.7) 60%, rgba(26,21,32,0.85) 100%);
+  z-index:1;pointer-events:none;
+}
+
+
+.why-card-num{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:0.65rem;font-weight:600;letter-spacing:0.25em;
+  text-transform:uppercase;display:block;margin-bottom:14px;
+  opacity:0.4;
+}
+.why-card h3{font-family:'Playfair Display',Georgia,serif;font-size:1.05rem;font-weight:700;color:var(--ink);margin-bottom:10px;line-height:1.2;}
+.why-card p{font-size:0.82rem;color:var(--tm);line-height:1.75;}
+
+</style>
+</head>
+<body style="background:var(--cream);">
+<!-- HERO -->
+<section class="hero" aria-label="Hero">
+<div class="hero-slides">
+  <div class="hero-slide  active" style="background-image:url('https://therealerikap.github.io/tamraloo-assets/saxophone-player-performing-on-stage-in.jpeg');"></div>
+  <div class="hero-slide" style="background-image:url('https://therealerikap.github.io/tamraloo-assets/teacher-and-students-posed-on-risers.jpg');"></div>
+  <div class="hero-slide" style="background-image:url('https://therealerikap.github.io/tamraloo-assets/two-students-playing-cellos-during-music.jpg');"></div>
+  <div class="hero-slide" style="background-image:url('https://therealerikap.github.io/tamraloo-assets/boy-playing-clarinet-on-stage-during.jpeg');"></div>
+  <div class="hero-slide" style="background-image:url('https://therealerikap.github.io/tamraloo-assets/large-group-of-young-people-on.jpeg');"></div>
+</div>
+  <span class="hero-eyebrow">Lincoln, CA &nbsp;&middot;&nbsp; Placer County &nbsp;&middot;&nbsp; 30+ Years Teaching</span>
+  <h1 class="hero-h1">
+    Where students<br><em>become performers.</em>
+  </h1>
+  <p class="hero-sub">Music lessons, dance classes, theatre programs, and academic tutoring — for every age and every stage, right here in Lincoln.</p>
+  <div class="hero-btns">
+    <a href="https://www.tamraloo.com/free-trial" class="btn-primary" onclick="try{window.top.location.href=this.href;}catch(e){window.location.href=this.href;}return false;">Claim Your Free Lesson</a>
+    <a href="https://www.tamraloo.com/class-registration" class="btn-ghost" onclick="try{window.top.location.href=this.href;}catch(e){window.location.href=this.href;}return false;">View All Classes</a>
+  </div>
+  <div class="awards-bar" role="list">
+    <div class="award-item" role="listitem">
+      <span class="award-label">Sacramento A-List</span>
+      <span class="award-name">Best Music Instruction</span>
+    </div>
+    <div class="award-item" role="listitem">
+      <span class="award-label">Lincoln Best of the Best</span>
+      <span class="award-name">Best Music Instruction</span>
+    </div>
+    <div class="award-item" role="listitem">
+      <span class="award-label">30+ Years</span>
+      <span class="award-name">Serving Students &amp; Families</span>
+    </div>
+    <div class="award-item" role="listitem">
+      <span class="award-label">Charter School</span>
+      <span class="award-name">Approved Vendor</span>
+    </div>
+  </div>
+</section>
+
+<section class="pillars-section" aria-label="Programs">
+  <div class="pillars-grid">
+    <a href="https://www.tamraloo.com/music-lessons" class="pillar music" onclick="try{window.top.location.href=this.href;}catch(e){window.location.href=this.href;}return false;">
+      <div class="pillar-bg" style="background-image:url('');"></div>
+      <div class="pillar-overlay"></div>
+      <div class="pillar-accent" style="background:#4285b2;"></div>
+      <div class="pillar-content">
+        <h2 class="pillar-name">Music</h2>
+        <p class="pillar-desc">Private and group lessons for all ages. Beginners to advanced performers.</p>
+        <div class="pillar-programs-hover"><span class="prog-pill">Voice</span><span class="prog-pill">Piano</span><span class="prog-pill">Guitar</span><span class="prog-pill">Drums</span><span class="prog-pill">Strings</span><span class="prog-pill">Woodwinds</span><span class="prog-pill">Ukulele</span></div>
+        <span class="pillar-cta-hover">Explore Music</span>
+      </div></a>
+    <a href="https://www.tamraloo.com/dance-lessons-lincoln-ca" class="pillar dance" onclick="try{window.top.location.href=this.href;}catch(e){window.location.href=this.href;}return false;">
+      <div class="pillar-bg" style="background-image:url('');"></div>
+      <div class="pillar-overlay"></div>
+      <div class="pillar-accent" style="background:#c8007d;"></div>
+      <div class="pillar-content">
+        <h2 class="pillar-name">Dance</h2>
+        <p class="pillar-desc">Technique, artistry, and stage confidence in every style.</p>
+        <div class="pillar-programs-hover"><span class="prog-pill">Ballet</span><span class="prog-pill">Jazz</span><span class="prog-pill">Tap</span><span class="prog-pill">Hip-Hop</span><span class="prog-pill">Musical Theatre</span><span class="prog-pill">Adult Classes</span></div>
+        <span class="pillar-cta-hover">Explore Dance</span>
+      </div></a>
+    <a href="https://www.tamraloo.com/dance" class="pillar theatre" onclick="try{window.top.location.href=this.href;}catch(e){window.location.href=this.href;}return false;">
+      <div class="pillar-bg" style="background-image:url('');"></div>
+      <div class="pillar-overlay"></div>
+      <div class="pillar-accent" style="background:#e19632;"></div>
+      <div class="pillar-content">
+        <h2 class="pillar-name">Theatre</h2>
+        <p class="pillar-desc">Acting, singing, and full productions. From Mini Musicals to main stage.</p>
+        <div class="pillar-programs-hover"><span class="prog-pill">Musical Theatre</span><span class="prog-pill">Acting</span><span class="prog-pill">Mini Musicals</span><span class="prog-pill">Main Stage</span><span class="prog-pill">Summer Theatre</span></div>
+        <span class="pillar-cta-hover">Explore Theatre</span>
+      </div></a>
+    <a href="https://www.tamraloo.com/tutoring-lincoln-ca" class="pillar tutoring" onclick="try{window.top.location.href=this.href;}catch(e){window.location.href=this.href;}return false;">
+      <div class="pillar-bg" style="background-image:url('');"></div>
+      <div class="pillar-overlay"></div>
+      <div class="pillar-accent" style="background:#4b9632;"></div>
+      <div class="pillar-content">
+        <h2 class="pillar-name">Tutoring</h2>
+        <p class="pillar-desc">Evidence-based literacy, math, and learning support for every student.</p>
+        <div class="pillar-programs-hover"><span class="prog-pill">Reading</span><span class="prog-pill">Math</span><span class="prog-pill">Dysgraphia</span><span class="prog-pill">Writing</span><span class="prog-pill">Advocacy</span><span class="prog-pill">Homeschool</span></div>
+        <span class="pillar-cta-hover">Explore Tutoring</span>
+      </div></a>
+  </div>
+</section>
+
+<!-- TRUST STATS -->
+<div class="trust-band" role="region" aria-label="Studio stats">
+  <div class="trust-inner">
+    <div class="trust-stat">
+      <span class="trust-num">30+</span>
+      <span class="trust-label">Years of Students &amp; Families</span>
+    </div>
+    <div class="trust-stat">
+      <span class="trust-num">4</span>
+      <span class="trust-label">Disciplines</span>
+    </div>
+    <div class="trust-stat">
+      <span class="trust-num">All Ages</span>
+      <span class="trust-label">Welcome</span>
+    </div>
+    <div class="trust-stat">
+      <span class="trust-num">Lincoln</span>
+      <span class="trust-label">Placer County, CA</span>
+    </div>
+    <div class="trust-stat">
+      <span class="trust-num">1</span>
+      <span class="trust-label">Free Lesson to Start</span>
+    </div>
+  </div>
+</div>
+
+<!-- SUMMER 2026 BAND -->
+<section class="summer-band" aria-label="Summer 2026">
+  <div class="summer-inner">
+    <div class="summer-text">
+      <span class="summer-eyebrow">Jun 8 &ndash; Jul 31, 2026</span>
+      <h2 class="summer-h2">Summer 2026 <em>is here.</em></h2>
+      <p class="summer-sub">Eight weeks of performing arts mornings, Creative STEM afternoons, Mini Musical camps, and the full Descendants main stage production. Something for every kid, every schedule.</p>
+      <a href="https://www.tamraloo.com/creative-conservatory-camp26" class="btn-primary" onclick="try{window.top.location.href=this.href;}catch(e){window.location.href=this.href;}return false;">See All Summer Programs</a>
+    </div>
+    <div class="summer-offerings">
+      <a href="https://www.tamraloo.com/creative-conservatory-camp26" class="summer-offer" onclick="try{window.top.location.href=this.href;}catch(e){window.location.href=this.href;}return false;"><div class="summer-offer-dot" style="background:#c8007d;"></div><div><span class="summer-offer-name">Creative Conservatory Camp</span><span class="summer-offer-detail">All Day &middot; Ages 5&ndash;12 &middot; $345/week</span></div><span class="summer-offer-arr">&rarr;</span></a>
+      <a href="https://www.tamraloo.com/summer-camp-2026" class="summer-offer" onclick="try{window.top.location.href=this.href;}catch(e){window.location.href=this.href;}return false;"><div class="summer-offer-dot" style="background:#4285b2;"></div><div><span class="summer-offer-name">AM Performing Arts Camps</span><span class="summer-offer-detail">9am&ndash;12pm &middot; Weekly themes &middot; $235/week</span></div><span class="summer-offer-arr">&rarr;</span></a>
+      <a href="https://www.tamraloo.com/summer-camp-2026" class="summer-offer" onclick="try{window.top.location.href=this.href;}catch(e){window.location.href=this.href;}return false;"><div class="summer-offer-dot" style="background:#e19632;"></div><div><span class="summer-offer-name">PM Creative STEM Camps</span><span class="summer-offer-detail">12:30&ndash;3pm &middot; Weekly themes &middot; $235/week</span></div><span class="summer-offer-arr">&rarr;</span></a>
+      <a href="https://www.tamraloo.com/creative-conservatory-camp26" class="summer-offer" onclick="try{window.top.location.href=this.href;}catch(e){window.location.href=this.href;}return false;"><div class="summer-offer-dot" style="background:#e1af4b;"></div><div><span class="summer-offer-name">Mini Musical Camps</span><span class="summer-offer-detail">Ages 6&ndash;10 &middot; 2-week sessions &middot; $400</span></div><span class="summer-offer-arr">&rarr;</span></a>
+    </div>
+    <div class="summer-offerings">
+      <a href="https://www.tamraloo.com/summer-theatre" class="summer-offer" onclick="try{window.top.location.href=this.href;}catch(e){window.location.href=this.href;}return false;"><div class="summer-offer-dot" style="background:#c8007d;"></div><div><span class="summer-offer-name">Mini Musical I</span><span class="summer-offer-detail">Beyond The Ever After &middot; Jun 15&ndash;26</span></div><span class="summer-offer-arr">&rarr;</span></a>
+      <a href="https://www.tamraloo.com/summer-theatre" class="summer-offer" onclick="try{window.top.location.href=this.href;}catch(e){window.location.href=this.href;}return false;"><div class="summer-offer-dot" style="background:#4285b2;"></div><div><span class="summer-offer-name">Mini Musical II</span><span class="summer-offer-detail">Frozen Kids &middot; Jul 6&ndash;17</span></div><span class="summer-offer-arr">&rarr;</span></a>
+      <a href="https://www.tamraloo.com/summer-theatre" class="summer-offer" onclick="try{window.top.location.href=this.href;}catch(e){window.location.href=this.href;}return false;"><div class="summer-offer-dot" style="background:#e19632;"></div><div><span class="summer-offer-name">Mini Musical III</span><span class="summer-offer-detail">K-Pop vs Demons &middot; Jul 20&ndash;31</span></div><span class="summer-offer-arr">&rarr;</span></a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0eeGri-Wk6M99ufulqOw98SpSsfKlmyqmIbLEkEdNwIUNMw/viewform" class="summer-offer" onclick="try{window.top.location.href=this.href;}catch(e){window.location.href=this.href;}return false;"><div class="summer-offer-dot" style="background:#e1af4b;"></div><div><span class="summer-offer-name">Descendants Auditions</span><span class="summer-offer-detail">Main Stage &middot; Ages 7+ &amp; Adults &middot; Sign Up</span></div><span class="summer-offer-arr">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY TAMRALOO -->
+<section class="why-section" aria-label="Why Tamraloo">
+  <div class="why-header">
+    <span class="section-eyebrow">Why Tamraloo</span>
+    <h2 class="section-h2">Teaching the whole student,<br>not just the skill.</h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      
+      <h3>30 years of big dreams, first notes, and standing ovations.</h3>
+      <p>Three decades of experience means we&rsquo;ve taught every age, every level, and every learning style. We know what works — and we know how to make it stick.</p>
+    </div>
+    <div class="why-card" style="border-top-color:#4285b2;">
+      <span class="why-card-num">II</span>
+      <h3>Every Student Is a Priority</h3>
+      <p>Small class sizes, private lesson options, and teachers who remember your name and your goals. You&rsquo;re not a number here.</p>
+    </div>
+    <div class="why-card" style="border-top-color:#e19632;">
+      <span class="why-card-num">III</span>
+      <h3>One Place for Everything</h3>
+      <p>Music, dance, theatre, and tutoring under one roof. Families can enroll siblings, build schedules, and grow with us for years.</p>
+    </div>
+    <div class="why-card" style="border-top-color:#e1af4b;">
+      <span class="why-card-num">IV</span>
+      <h3>Award-Winning Studio</h3>
+      <p>Sacramento A-List Best Music Instruction. Lincoln Best of the Best. Consistently recognized by families in Placer County for excellence in the arts.</p>
+    </div>
+    <div class="why-card" style="border-top-color:#4b9632;">
+      <span class="why-card-num">V</span>
+      <h3>Flexible Scheduling</h3>
+      <p>Before school, after school, weekends. Weekly lessons, camps, intensives. We work around your family&rsquo;s life — not the other way around.</p>
+    </div>
+    <div class="why-card" style="border-top-color:#4285b2;">
+      <span class="why-card-num">VI</span>
+      <h3>Real Results on Stage</h3>
+      <p>Recitals, competitions, theatre productions, and showcases throughout the year. Students perform — and families get to watch them shine.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION + FREE LESSON CTA -->
+<section class="location-cta" aria-label="Visit us and free lesson">
+  <div class="location-inner">
+    <div class="location-text">
+      <h2>Find us in Lincoln, CA.</h2>
+      <p>We&rsquo;re in the heart of Lincoln, serving families from Rocklin, Roseville, Granite Bay, Loomis, and all of Placer County. Stop by, call, or text — we&rsquo;d love to meet you.</p>
+      <div class="location-details">
+        <div class="location-detail">
+          <span class="location-dot"></span>
+          <a href="https://maps.google.com/?q=2800+Nicolaus+Road+%23100+Lincoln+CA+95648" target="_blank">2800 Nicolaus Road #100, Lincoln CA 95648</a>
+        </div>
+        <div class="location-detail">
+          <span class="location-dot"></span>
+          <a href="tel:9166642516">(916) 664-2516</a>
+        </div>
+        <div class="location-detail">
+          <span class="location-dot"></span>
+          <a href="mailto:support@tamraloo.com">support@tamraloo.com</a>
+        </div>
+        <div class="location-detail">
+          <span class="location-dot"></span>
+          <span>Mon&ndash;Fri 9am&ndash;7pm &nbsp;&middot;&nbsp; Sat 9am&ndash;3pm</span>
+        </div>
+      </div>
+    </div>
+    <div class="free-lesson-card">
+      <h3>Your first lesson is on us.</h3>
+      <p>Try any program — music, dance, theatre, or tutoring — with no commitment. One free lesson for new students.</p>
+      <a href="https://www.tamraloo.com/free-trial" class="btn-primary" onclick="try{window.top.location.href=this.href;}catch(e){window.location.href=this.href;}return false;">Claim Your Free Lesson</a>
+      <p class="note">No credit card. No obligation. Just show up.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+(function(){
+  var slides = document.querySelectorAll('.hero-slide');
+  if(!slides.length) return;
+  var cur = 0;
+  setInterval(function(){
+    slides[cur].classList.remove('active');
+    cur = (cur + 1) % slides.length;
+    slides[cur].classList.add('active');
+  }, 5000);
+})();
+</script>
+
+</body>
+</html>
