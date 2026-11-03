@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Black Friday $49 First Month | Tamraloo Studios Lincoln CA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- =========================================================================
+     BLACK FRIDAY 2026 LANDING PAGE  (Wix slug: /black-friday)
+
+     Copy is from the Website Edits doc, Black Friday Necessities tab, with
+     theatre added alongside music and dance.
+
+     CLASS LISTS come live from the Tamraloo class schedule Google Sheet (the
+     same sheet that runs the Lesson Calendar page). Show = No rows are hidden
+     and band classes are left out because bands are not part of the offer.
+     Edit the sheet and this page follows.
+
+     Links and tuition live in the OFFER block in the script at the bottom.
+     Anything left as "TBD" shows as a yellow highlight.
+     ========================================================================= -->
+
+<style>
+:root{--cream:#faf7f4;--ink:#1a1520;--mid:#2d2535;--tm:#5a4e5f;--tl:#8a7a8f;--blue:#4285b2;--mag:#c8007d;--or:#e19632;--gold:#e1af4b;--green:#4b9632;--bd:rgba(26,21,32,0.09);--dp:'Playfair Display',Georgia,serif;--bd2:'Plus Jakarta Sans',system-ui,sans-serif;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:var(--bd2);background:var(--cream);color:var(--ink);-webkit-font-smoothing:antialiased;}
+html,body{background:var(--cream);}
+a{color:inherit;text-decoration:none;}
+.stripe{display:flex;height:6px;}
+.ls{flex:1;}
+.ls:nth-child(1){background:#78c8ea;}.ls:nth-child(2){background:#c8007d;}.ls:nth-child(3){background:#98c840;}.ls:nth-child(4){background:#f8c050;}.ls:nth-child(5){background:#c8007d;}.ls:nth-child(6){background:#98c840;}.ls:nth-child(7){background:#48a8d8;}.ls:nth-child(8){background:#f8c050;}.ls:nth-child(9){background:#98c840;}.ls:nth-child(10){background:#c8007d;}.ls:nth-child(11){background:#78c8ea;}
+.tbd{background:#ffd84d !important;color:#4a3800 !important;padding:0 6px;border-radius:3px;font-weight:700;box-shadow:0 0 0 2px rgba(255,216,77,0.35);}
+
+.ubar{background:var(--mag);color:#fff;text-align:center;padding:9px 20px;font-size:0.74rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;line-height:1.5;}
+
+/* HERO */
+.bhero{background:var(--ink);padding:48px 32px 56px;position:relative;overflow:hidden;}
+.bhero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 70% at 12% 0%,rgba(225,175,75,0.18) 0%,transparent 62%);pointer-events:none;}
+.bhero-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;position:relative;}
+
+/* DEAL GRAPHIC */
+.deal{background:var(--cream);border-radius:12px;overflow:hidden;box-shadow:0 26px 64px rgba(0,0,0,0.45);text-align:center;}
+.deal-top{background:var(--mag);color:#fff;padding:14px 20px;font-size:0.72rem;font-weight:700;letter-spacing:0.24em;text-transform:uppercase;}
+.deal-body{padding:30px 28px 26px;}
+.deal-k{font-size:0.7rem;font-weight:700;letter-spacing:0.22em;text-transform:uppercase;color:var(--tm);}
+.deal-price{font-family:var(--dp);font-size:clamp(4rem,9vw,6rem);font-weight:900;color:var(--ink);line-height:1;letter-spacing:-0.03em;margin:6px 0 4px;}
+.deal-price span{color:var(--mag);}
+.deal-line{font-family:var(--dp);font-size:1.25rem;font-weight:700;font-style:italic;color:var(--ink);margin-bottom:16px;}
+.deal-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+.deal-pills b{font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:7px 13px;border-radius:30px;color:#fff;}
+.deal-pills b:nth-child(1){background:var(--blue);}.deal-pills b:nth-child(2){background:var(--mag);}.deal-pills b:nth-child(3){background:var(--green);}.deal-pills b:nth-child(4){background:var(--or);}
+.deal-waive{display:inline-block;background:var(--gold);color:var(--ink);font-weight:700;font-size:0.85rem;padding:8px 16px;border-radius:4px;margin-bottom:16px;}
+.deal-fine{font-size:0.74rem;color:var(--tm);line-height:1.6;max-width:400px;margin:0 auto;}
+.deal-fine + .deal-fine{margin-top:6px;}
+
+.hero-eyebrow{font-size:0.62rem;font-weight:700;letter-spacing:0.26em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:block;}
+.hero-h1{font-family:var(--dp);font-size:clamp(2rem,4.2vw,3rem);font-weight:900;color:#fff;line-height:1.06;letter-spacing:-0.02em;margin-bottom:16px;}
+.hero-h1 em{font-style:italic;color:var(--gold);}
+.hero-sub{font-size:0.98rem;color:rgba(255,255,255,0.78);margin-bottom:18px;line-height:1.7;}
+.hero-terms{font-size:0.86rem;color:rgba(255,255,255,0.66);line-height:1.7;border-left:3px solid var(--gold);padding-left:16px;margin-bottom:24px;}
+.hero-terms b{color:#fff;}
+.hero-tel{display:inline-block;font-size:0.8rem;font-weight:600;letter-spacing:0.06em;color:rgba(255,255,255,0.72);border:1.5px solid rgba(255,255,255,0.22);border-radius:4px;padding:11px 20px;}
+.hero-tel:hover{border-color:rgba(255,255,255,0.55);color:#fff;}
+
+/* SECTIONS */
+.section{padding:58px 32px;}
+.section-inner{max-width:1080px;margin:0 auto;}
+.section-alt{background:#fff;}
+.eyebrow{font-size:0.6rem;font-weight:700;letter-spacing:0.24em;text-transform:uppercase;color:var(--or);display:block;margin-bottom:12px;}
+.h2{font-family:var(--dp);font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:700;color:var(--ink);line-height:1.14;letter-spacing:-0.02em;margin-bottom:14px;}
+.lead{font-size:0.95rem;color:var(--tm);line-height:1.8;max-width:680px;}
+
+/* PROGRAM BUTTONS */
+.pbtns{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:32px;}
+.pbtn{font-family:var(--bd2);font-size:0.92rem;font-weight:700;color:var(--ink);background:#fff;border:2px solid var(--ink);border-radius:6px;padding:16px 12px;cursor:pointer;transition:background 0.15s,color 0.15s;}
+.pbtn:hover{background:rgba(26,21,32,0.05);}
+.pbtn.music:hover,.pbtn.music:focus{background:var(--blue);border-color:var(--blue);color:#fff;}.pbtn.dance:hover,.pbtn.dance:focus{background:var(--mag);border-color:var(--mag);color:#fff;}.pbtn.theatre:hover,.pbtn.theatre:focus{background:var(--green);border-color:var(--green);color:#fff;}.pbtn.tutoring:hover,.pbtn.tutoring:focus{background:var(--or);border-color:var(--or);color:#fff;}
+.pbtn small{display:block;font-size:0.66rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;color:var(--mag);}
+.pbtn:hover small,.pbtn:focus small{color:#fff;}
+
+/* PANELS */
+.panel{margin-top:56px;padding-top:6px;}
+.panel + .panel{border-top:1px solid var(--bd);padding-top:48px;}
+.panel-top{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:18px;}
+.panel-h{font-family:var(--dp);font-size:1.5rem;font-weight:700;margin-bottom:6px;}
+.panel-sub{font-size:0.88rem;color:var(--tm);line-height:1.7;max-width:640px;}
+.panel-sub b{color:var(--ink);}
+.panel-links{display:flex;gap:10px;flex-wrap:wrap;}
+.plink{font-size:0.78rem;font-weight:700;color:var(--blue);border-bottom:1.5px solid rgba(66,133,178,0.35);padding-bottom:2px;white-space:nowrap;}
+.plink:hover{border-color:var(--blue);}
+
+/* LIVE SCHEDULE (same look as the Lesson Calendar page) */
+.sched-sec{margin-top:22px;}
+.sched-sechead{font-size:0.64rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:var(--acc);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--bd);}
+.sched-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;}
+.sched-card{background:#fff;border:1px solid var(--bd);border-left:3px solid var(--acc);border-radius:8px;padding:13px 15px;display:flex;flex-direction:column;}
+.sched-cls{font-weight:700;font-size:0.95rem;color:var(--ink);line-height:1.3;}
+.sched-age{font-weight:400;color:var(--tl);font-size:0.8rem;}
+.sched-teach{font-style:italic;color:var(--tm);font-size:0.85rem;margin-top:4px;}
+.sched-when{font-size:0.85rem;color:var(--ink);margin-top:4px;}
+.sched-when b{font-weight:700;}
+.sched-tu{font-size:0.78rem;color:var(--tm);margin-top:6px;}
+.enroll{display:inline-block;align-self:flex-start;margin-top:10px;background:var(--mag);color:#fff;font-weight:700;font-size:0.76rem;padding:8px 13px;border-radius:4px;white-space:nowrap;}
+.enroll:hover{background:#a80069;}
+.enroll.off{background:#e6e0e8;color:var(--tm);cursor:default;}
+.sched-empty{font-size:0.9rem;color:var(--tm);padding:20px 0;}
+
+/* TUTORING */
+.tut{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;}
+.tut-copy p{font-size:0.92rem;color:var(--tm);line-height:1.75;margin-bottom:14px;}
+.tut-copy p b{color:var(--ink);}
+.tut-note{background:#fff;border:1px solid var(--bd);border-left:4px solid var(--or);border-radius:6px;padding:16px 18px;}
+.btn{display:inline-block;background:var(--or);color:#fff;font-weight:700;font-size:0.88rem;padding:13px 20px;border-radius:5px;margin-top:6px;}
+.btn:hover{background:#c98222;}
+.formwrap{background:#fff;border:1px solid var(--bd);border-radius:8px;overflow:hidden;min-height:300px;}
+.formwrap iframe{width:100%;height:900px;border:0;display:block;}
+.formfallback{padding:28px 24px;text-align:center;}
+.formfallback p{font-size:0.88rem;color:var(--tm);line-height:1.7;margin-bottom:14px;}
+
+/* BAND (kept separate from the $49 offer) */
+.band{margin-top:44px;border:2px dashed rgba(26,21,32,0.22);border-radius:10px;padding:26px 28px;display:flex;justify-content:space-between;align-items:center;gap:24px;background:var(--cream);}
+.band h3{font-family:var(--dp);font-size:1.25rem;font-weight:700;margin-bottom:4px;}
+.band p{font-size:0.85rem;color:var(--tm);line-height:1.6;max-width:560px;}
+.band a{flex:0 0 auto;background:var(--blue);color:#fff;font-weight:700;font-size:0.88rem;padding:13px 20px;border-radius:5px;white-space:nowrap;}
+.band a:hover{background:#356f96;}
+
+/* TERMS */
+.terms p{font-size:0.86rem;color:var(--tm);line-height:1.8;margin-bottom:14px;max-width:820px;}
+.terms p b{color:var(--ink);}
+
+/* CLOSE */
+.close-band{background:var(--ink);padding:52px 32px;text-align:center;position:relative;overflow:hidden;}
+.close-inner{max-width:640px;margin:0 auto;position:relative;}
+.close-inner h2{font-family:var(--dp);font-size:clamp(1.6rem,3vw,2.1rem);font-weight:700;color:#fff;margin-bottom:12px;}
+.close-inner p{font-size:0.9rem;color:rgba(255,255,255,0.6);margin-bottom:22px;line-height:1.7;}
+.close-inner .tel{font-family:var(--dp);font-size:1.9rem;font-weight:900;color:var(--gold);display:inline-block;}
+.close-inner .mail{display:block;margin-top:12px;font-size:0.85rem;color:rgba(255,255,255,0.6);}
+
+@media(max-width:940px){.bhero-inner{grid-template-columns:1fr;gap:34px;}.tut{grid-template-columns:1fr;}.pbtns{grid-template-columns:1fr 1fr;}}
+@media(max-width:700px){.band{flex-direction:column;align-items:flex-start;}}
+@media(max-width:560px){.bhero{padding:32px 18px 40px;}.section{padding:44px 18px;}.close-band{padding:44px 18px;}.deal-body{padding:24px 18px 20px;}.pbtns{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<div class="stripe"><div class="ls"></div><div class="ls"></div><div class="ls"></div><div class="ls"></div><div class="ls"></div><div class="ls"></div><div class="ls"></div><div class="ls"></div><div class="ls"></div><div class="ls"></div><div class="ls"></div></div>
+
+<div class="ubar">Black Friday at Tamraloo &nbsp;&middot;&nbsp; First month just $49 &nbsp;&middot;&nbsp; Enrollment fee waived</div>
+
+<section class="bhero" aria-label="Black Friday offer">
+  <div class="bhero-inner">
+    <div class="deal" role="img" aria-label="Black Friday at Tamraloo. First month $49. Start a new group class this January. Music, dance, theatre and tutoring pods. Enrollment fee waived.">
+      <div class="deal-top">Black Friday at Tamraloo</div>
+      <div class="deal-body">
+        <div class="deal-k">First Month</div>
+        <div class="deal-price"><span>$</span>49</div>
+        <div class="deal-line">Start a new group class this January!</div>
+        <div class="deal-pills"><b>Music</b><b>Dance</b><b>Theatre</b><b>Tutoring Pods</b></div>
+        <div class="deal-waive">Enrollment fee waived</div>
+        <p class="deal-fine">Three-month commitment. Regular tuition begins in month two.</p>
+        <p class="deal-fine">Cancel before April 1, 2027, and the waived $60 enrollment fee plus the first-month tuition discount will be due in full.</p>
+        <p class="deal-fine">Participating programs only. Terms apply.</p>
+      </div>
+    </div>
+
+    <div>
+      <span class="hero-eyebrow">January 2027 &nbsp;&middot;&nbsp; Lincoln, CA</span>
+      <h1 class="hero-h1">New year. New possibilities.<br><em>First month just $49!</em></h1>
+      <p class="hero-sub">Give your student something to look forward to this January! Explore participating group music, dance, and theatre classes, or tell us what your student needs in a tutoring pod.</p>
+      <p class="hero-terms"><b>Your first month is $49, with the enrollment fee waived.</b> A three-month commitment applies. Regular monthly tuition begins in month two. If you cancel before April 1, 2027, the waived $60 enrollment fee and the difference between your $49 first month and the program's regular monthly tuition will be due in full.</p>
+      <a href="tel:9166642516" class="hero-tel">Questions? Call (916) 664-2516</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-label="Participating programs">
+  <div class="section-inner">
+    <span class="eyebrow">Participating Programs</span>
+    <h2 class="h2">Find their next thing.</h2>
+    <p class="lead">Pick a program to jump to its current group class schedule with ages, days, times and regular monthly tuition, then enroll. Your first month is $49 and the enrollment fee is waived.</p>
+
+    <div class="pbtns">
+      <button class="pbtn music" data-panel="music">Explore Music Classes<small>$49 first month</small></button>
+      <button class="pbtn dance" data-panel="dance">Explore Dance Classes<small>$49 first month</small></button>
+      <button class="pbtn theatre" data-panel="theatre">Explore Theatre Classes<small>$49 first month</small></button>
+      <button class="pbtn tutoring" data-panel="tutoring">Find a Tutoring Pod<small>$49 first month</small></button>
+    </div>
+
+    <div class="panels" id="panels">
+      <div class="panel" id="panel-music"></div>
+      <div class="panel" id="panel-dance"></div>
+      <div class="panel" id="panel-theatre"></div>
+
+      <div class="panel" id="panel-tutoring">
+        <div class="tut">
+          <div class="tut-copy">
+            <h3 class="panel-h">Small groups. Big support.</h3>
+            <p>Looking for extra support this January? Tell us your student's grade, subjects, and availability, and we'll work to match them with a tutoring pod.</p>
+            <div class="tut-note"><p style="margin:0;"><b>No payment is due today.</b> Tutoring pods begin once we have at least three students enrolled in a compatible group. We'll contact you to confirm the schedule, tuition, and enrollment before billing begins.</p></div>
+            <p style="margin-top:18px;"><a class="btn" id="tut-btn" href="#">Complete the Tutoring Interest Form</a></p>
+            <p><a class="plink" id="tut-page" href="https://www.tamraloo.com/tutoring-lincoln-ca">About our tutoring programs</a></p>
+          </div>
+          <div class="formwrap" id="tut-form"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="band">
+      <div>
+        <h3>Looking for a band?</h3>
+        <p>Our band programs have their own pricing and commitments and are not part of the $49 offer. See the band page for details and enrollment.</p>
+      </div>
+      <a id="band-btn" href="#">Explore Our Band Programs</a>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt terms" aria-label="Terms and conditions">
+  <div class="section-inner">
+    <span class="eyebrow" style="color:var(--blue);">Good to Know</span>
+    <h2 class="h2">Terms &amp; Conditions</h2>
+    <p>The Black Friday offer applies to one new enrollment per student in a participating January group music class, dance class, theatre class, or tutoring pod. The first month is $49, and the standard $60 enrollment fee is waived.</p>
+    <p>Enrollment requires a commitment to the first three consecutive months. Regular monthly tuition begins in month two. <b>This special rate is our way of helping your family get started with a full season of learning and growth. If you cancel before April 1, 2027, the waived $60 enrollment fee and the difference between your $49 promotional month and the program's regular monthly tuition will be due in full.</b> After the initial three-month commitment, enrollment continues month-to-month under Tamraloo Studios' regular tuition, cancellation, and withdrawal policies.</p>
+    <p>Offer does not apply to current class enrollments, private lessons, camps, productions, or band programs advertised separately. It is nontransferable and cannot be combined with another introductory offer.</p>
+    <p>Classes and tutoring pods are subject to availability and minimum enrollment. Tutoring interest form submission does not reserve a space or complete enrollment. Tutoring billing begins only after a compatible pod of at least three students is confirmed and the family has completed enrollment.</p>
+    <p>If Tamraloo cannot place a student or a selected class does not launch, any promotional payment collected may be transferred to another eligible program or refunded. The early cancellation charges above do not apply when Tamraloo cannot provide the program.</p>
+  </div>
+</section>
+
+<section class="close-band" aria-label="Questions">
+  <div class="close-inner">
+    <h2>Not sure which class fits?</h2>
+    <p>Call the studio and we will help you find the right class for your student's age, schedule and interests.</p>
+    <a href="tel:9166642516" class="tel">(916) 664-2516</a>
+    <a href="mailto:support@tamraloo.com" class="mail">support@tamraloo.com</a>
+  </div>
+</section>
+
+<div class="stripe"><div class="ls"></div><div class="ls"></div><div class="ls"></div><div class="ls"></div><div class="ls"></div><div class="ls"></div><div class="ls"></div><div class="ls"></div><div class="ls"></div><div class="ls"></div><div class="ls"></div></div>
+
+<script>
+/* =========================================================================
+   THE ONLY BLOCK YOU EDIT
+
+   stripe:  the checkout link every class in that program uses. To give one
+            class its own link, add it to perClass below.
+   tuition: the regular monthly tuition shown on each class card.
+   perClass: optional overrides keyed by the class name exactly as it is in
+            the schedule sheet, for example
+            "Group Piano": { tuition: "$99", stripe: "https://buy.stripe.com/..." }
+   Leave anything as "TBD" and it shows as a yellow highlight.
+   ========================================================================= */
+var OFFER = {
+  music:   { stripe: "TBD", tuition: "TBD" },
+  dance:   { stripe: "TBD", tuition: "TBD" },
+  theatre: { stripe: "TBD", tuition: "TBD" },
+  perClass: {},
+  tutoringForm: "TBD",
+  bandPage: "https://mailchi.mp/8a80f9b15fab/january-2027-first-access-final"
+};
+
+/* ---- nothing below needs editing ---- */
+(function () {
+  /* Same published sheet the Lesson Calendar page reads */
+  var SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRI9ZoJ05UPVnbIWPpER_ltpKE5BBfLzTNKsTQV5hhYEzBd0taYfTa5Emqeva8hvdI-C-n7TbjJdgRv/pub?gid=1471313473&single=true&output=csv";
+  var SCHEDULE_PAGE = "https://www.tamraloo.com/lesson-calendar";
+
+  var PILLARS = {
+    music:   { title:"Group Music Classes",   acc:"var(--blue)",  page:"https://www.tamraloo.com/music-lessons",           pageLabel:"About our music program",
+               match:function(p,s){ return p==="music"; } },
+    dance:   { title:"Group Dance Classes",   acc:"var(--mag)",   page:"https://www.tamraloo.com/dance-lessons-lincoln-ca", pageLabel:"About our dance program",
+               match:function(p,s){ return p==="dance & theatre" && s!=="theatre"; } },
+    theatre: { title:"Group Theatre Classes", acc:"var(--green)", page:"https://www.tamraloo.com/theatre",                  pageLabel:"About our theatre program",
+               match:function(p,s){ return p==="dance & theatre" && s==="theatre"; } }
+  };
+
+  /* Built-in copy of the schedule (Nov 3, 2026) in case the sheet can't load */
+  var FALLBACK = [
+["Program", "Section", "Class", "Age", "Teacher", "Day", "Time", "Show"],
+["Dance & Theatre", "Ballet", "Ballet/Tumble", "3-5", "Miss Anna", "Thursday", "9:15 AM", "Yes"],
+["Dance & Theatre", "Ballet", "Ballet/Tap", "2.5-4", "Miss Anna", "Thursday", "10:00 AM", "Yes"],
+["Dance & Theatre", "Ballet", "Ballet/Tap", "4-6", "Miss Anna", "Thursday", "3:00 PM", "Yes"],
+["Dance & Theatre", "Ballet", "Ballet/Tap", "3-5", "Miss Grace", "Saturday", "10:15 AM", "Yes"],
+["Dance & Theatre", "Ballet", "Ballet/Tap", "6-8", "Miss Grace", "Saturday", "11:00 AM", "Yes"],
+["Dance & Theatre", "Ballet", "Ballet I", "7-10", "Miss Grace", "Wednesday", "5:30 PM", "Yes"],
+["Dance & Theatre", "Ballet", "Ballet I/II", "7-10", "Miss Grace", "Monday", "6:00 PM", "Yes"],
+["Dance & Theatre", "Ballet", "Pre-Teen Ballet", "11-13", "Miss Grace", "Wednesday", "6:15 PM", "Yes"],
+["Dance & Theatre", "Ballet", "High School Ballet", "High School", "Miss Grace", "Wednesday", "7:00 PM", "Yes"],
+["Dance & Theatre", "Ballet", "Adult Ballet I/II", "18+", "Miss Grace", "Monday", "7:00 PM", "Yes"],
+["Dance & Theatre", "Jazz", "Jazz/Tap", "6-8", "Miss Anna", "Thursday", "3:45 PM", "Yes"],
+["Dance & Theatre", "Jazz", "Pre-Teen Jazz", "9-11", "Miss Sara", "Tuesday", "5:30 PM", "Yes"],
+["Dance & Theatre", "Jazz", "Jazz II", "11+", "Nat Q", "Tuesday", "3:30 PM", "Yes"],
+["Dance & Theatre", "Jazz", "Musical Theatre Jazz", "12-14", "Nat Q", "Thursday", "4:30 PM", "Yes"],
+["Dance & Theatre", "Jazz", "Musical Theatre Jazz", "High School", "Nat Q", "Tuesday", "6:30 PM", "Yes"],
+["Dance & Theatre", "Tiny & Hip Hop", "Tiny Movers", "T-2.5", "Miss Anna", "Wednesday", "10:00 AM", "Yes"],
+["Dance & Theatre", "Tiny & Hip Hop", "Hip Hop/Tumble", "3-5", "Miss Anna", "Wednesday", "9:15 AM", "Yes"],
+["Dance & Theatre", "Tiny & Hip Hop", "Hip Hop/Tumbling", "4-6", "Miss Grace", "Monday", "5:00 PM", "Yes"],
+["Dance & Theatre", "Tiny & Hip Hop", "Hip Hop/Funk", "7-10", "Miss Grace", "Monday", "4:15 PM", "Yes"],
+["Dance & Theatre", "Tiny & Hip Hop", "Hip Hop/Funk", "11-12", "Miss Grace", "Wednesday", "4:45 PM", "Yes"],
+["Dance & Theatre", "Tiny & Hip Hop", "Hip Hop", "12-14 (Jr. High) ", "Miss Madi", "Wednesday", "4:30 PM", "Yes"],
+["Dance & Theatre", "Tiny & Hip Hop", "High School Hip Hop", "14-18", "Miss Madi", "Wednesday", "6:30 PM", "Yes"],
+["Dance & Theatre", "Tap ", "Adult Tap", "18+", "Nat Q", "Tuesday", "5:30 PM", "Yes"],
+["Dance & Theatre", "Tap", "Pre-Teen Tap Technique", "9-11", "Miss Madi", "Wednesday", "5:30 PM", "Yes"],
+["Dance & Theatre", "Tap ", "Tap I/II", "12-14", "Nat Q", "Tuesday", "4:30 PM", "Yes"],
+["Dance & Theatre", "Tap ", "Teen Tap", "14-18", "Nat Q", "Thursday", "5:30 PM", "Yes"],
+["Dance & Theatre", "Theatre", "Storybook Stars", "5-8", "Miss McKenna", "Friday", "5:00 PM", "Yes"],
+["Dance & Theatre", "Theatre", "Theatre Lab", "9-11", "Miss McKenna", "Monday", "4:30 PM", "Yes"],
+["Music", "Theory & Production", "Audio Engineering A/B ", "13+", "Mr Daniel", "Thursday", "4:15 PM", "Yes"],
+["Music", "Theory & Production", "Audio Engineering A/B ", "13+", "Mr Daniel", "Friday", "4:15 PM", "Yes"],
+["Music", "Violin", "Ensemble", "5+", "Mr. Babak", "Thursday", "7:00 PM", "Yes"],
+["Music", "Voice", "Group Voice", "5-8", "Miss McKenna", "Wednesday", "5:00 PM", "Yes"],
+["Music", "Voice", "Group Voice", "9-12", "Miss Sara", "Tuesday", "6:30", "Yes"],
+["Music", "Voice", "Group Voice", "13-18", "Miss Rose", "Tuesday", "4:30 PM", "Yes"],
+["Music", "Instruments & Band", "Rhythm Percussion", "5+", "Mr Carter", "Monday", "3:30 PM", ""],
+["Music", "Instruments & Band", "Beginner Percussion", "8+ ", "Mr Daniel", "Monday", "5:45 PM", "Yes"],
+["Music", "Instruments & Band", "Intermediate Percussion", "11+", "Mr Daniel", "Monday", "6:45 PM", "Yes"],
+["Music", "Instruments & Band", "Group Piano", "6-10", "Mr David", "Monday", "2:30 PM", "Yes"],
+["Music", "Instruments & Band", "Group Piano", "11+", "Mr David", "Wednesday", "4:00 PM", "Yes"],
+["Music", "Instruments & Band", "Group Piano", "5-8", "Mr Daniel", "Thursday", "5:00 PM", "Yes"],
+["Music", "Instruments & Band", "Beginner Guitar", "9-12", "Mr Sam", "Tuesday", "4:00 PM", "Yes"],
+["Music", "Instruments & Band", "Inter/Advanced Guitar", "12-17", "Miss Kaylee", "Tuesday", "5:00 PM", "Yes"],
+["Music", "Instruments & Band", "Jr. High Country Band", "10-13", "Miss Kaylee", "Tuesday ", "6:00 PM", "Yes"],
+["Music", "Instruments & Band", "Country Band", "14-17", "Miss Kaylee", "Tuesday", "7:00 PM", ""],
+["Music", "Instruments & Band", "Jr. Band", "9-12", "Mr. Daniel", "Wednesday", "5:00", "Yes"],
+["Music", "Instruments & Band", "All Girl Rock Band", "13-18", "Miss Rose", "Monday", "4:30 PM", "Yes"],
+["Music", "Instruments & Band", "David's Rock Band", "13-18", "Mr David G", "Thursday", "5:00 PM", "Yes"],
+["Music", "Exploratory Music", "Mommy and Me ", "6 mos- 3", "Miss Kaylee", "Tuesday", "10:00 AM", "Yes"],
+["Music", "Exploratory Music", "Early Music", "4-6", "Miss Kaylee", "Tuesday ", "11:00 AM", "Yes"],
+["Music", "Exploratory Music", "Homeschool Music", "8-12", "Miss Kaylee", "Thursday", "10:00 AM", "Yes"]
+  ];
+
+  var NAV = "try{window.top.location.href=this.href;}catch(e){window.location.href=this.href;}return false;";
+  function isTBD(v){ return !v || String(v).trim().toUpperCase() === "TBD"; }
+  function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
+  function tidy(s){ return String(s||"").replace(/\s+/g," ").trim(); }
+
+  function parseCSV(text){
+    var rows=[],row=[],cur="",q=false;
+    for(var i=0;i<text.length;i++){
+      var c=text[i],n=text[i+1];
+      if(q){ if(c=='"'&&n=='"'){cur+='"';i++;} else if(c=='"'){q=false;} else cur+=c; }
+      else { if(c=='"')q=true; else if(c==','){row.push(cur);cur="";}
+             else if(c=='\n'){row.push(cur);rows.push(row);row=[];cur="";} else if(c!=='\r') cur+=c; }
+    }
+    if(cur.length||row.length){row.push(cur);rows.push(row);}
+    return rows;
+  }
+
+  function buildPanel(matrix, key){
+    var cfg = PILLARS[key], o = OFFER[key];
+    var h=0; for(var i=0;i<matrix.length;i++){ if(tidy(matrix[i][0]).toLowerCase()==="program"){h=i;break;} }
+    var idx={}; matrix[h].forEach(function(n,i){ idx[tidy(n).toLowerCase()]=i; });
+    function get(r,k){ var j=idx[k]; return j==null?"":tidy(r[j]); }
+
+    var sections=[], map={};
+    for(var r=h+1;r<matrix.length;r++){
+      var row=matrix[r]; if(!row||!row.length) continue;
+      var prog=get(row,"program").toLowerCase(), sec=get(row,"section");
+      if(!cfg.match(prog, sec.toLowerCase())) continue;
+      if((get(row,"show")||"yes").toLowerCase()==="no") continue;
+      if(/band/i.test(get(row,"class"))) continue;           /* bands are not part of the offer */
+      sec = sec || "Classes";
+      if(!map[sec]){ map[sec]=[]; sections.push(sec); }
+      map[sec].push(row);
+    }
+
+    var html = '<div class="panel-top"><div><h3 class="panel-h">'+esc(cfg.title)+'</h3>'
+      + '<p class="panel-sub">Participating January group classes. <b>Your first month is $49</b> and the enrollment fee is waived.</p></div>'
+      + '<div class="panel-links"><a class="plink" href="'+SCHEDULE_PAGE+'" onclick="'+NAV+'">See the full class schedule</a>'
+      + '<a class="plink" href="'+cfg.page+'" onclick="'+NAV+'">'+esc(cfg.pageLabel)+'</a></div></div>';
+
+    if(!sections.length){
+      return html + '<p class="sched-empty">Classes for this program are being finalized. Call (916) 664-2516 and we will help you find a spot.</p>';
+    }
+    html += '<div style="--acc:'+cfg.acc+'">';
+    sections.forEach(function(sec){
+      html += '<div class="sched-sec"><div class="sched-sechead">'+esc(sec)+'</div><div class="sched-grid">';
+      map[sec].forEach(function(row){
+        var cls=get(row,"class"), pc=OFFER.perClass[cls]||{};
+        var link=pc.stripe||o.stripe, tu=pc.tuition||o.tuition;
+        var tuHtml = isTBD(tu) ? '<span class="tbd">TBD</span>' : esc(tu)+'/month';
+        var btn = isTBD(link) ? '<span class="enroll off tbd">Link coming soon</span>'
+                              : '<a class="enroll" href="'+esc(link)+'" onclick="'+NAV+'">Enroll for $49</a>';
+        html += '<div class="sched-card">'
+          + '<div class="sched-cls">'+esc(cls)+' <span class="sched-age">(Age '+esc(get(row,"age"))+')</span></div>'
+          + '<div class="sched-teach">'+esc(get(row,"teacher"))+'</div>'
+          + '<div class="sched-when">'+esc(get(row,"day"))+' <b>@'+esc(get(row,"time"))+'</b></div>'
+          + '<div class="sched-tu">Regular tuition: '+tuHtml+'</div>'
+          + btn + '</div>';
+      });
+      html += '</div></div>';
+    });
+    return html + '</div>';
+  }
+
+  function render(matrix){
+    ["music","dance","theatre"].forEach(function(k){ document.getElementById("panel-"+k).innerHTML = buildPanel(matrix,k); });
+  }
+
+  render(FALLBACK);
+  fetch(SHEET_CSV_URL+"&cb="+Date.now(),{cache:"no-store"})
+    .then(function(r){ if(!r.ok) throw 0; return r.text(); })
+    .then(function(t){ var m=parseCSV(t); if(m.length>1) render(m); })
+    .catch(function(){ /* keep the built-in copy */ });
+
+  /* tutoring form: embed if set, call button backup */
+  var tb=document.getElementById("tut-btn"), tf=document.getElementById("tut-form");
+  document.getElementById("tut-page").setAttribute("onclick", NAV);
+  if(isTBD(OFFER.tutoringForm)){
+    tb.classList.add("tbd"); tb.removeAttribute("href");
+    tf.innerHTML='<div class="formfallback"><p><span class="tbd">Tutoring form link TBD</span></p><p>Until the form is ready, call the studio and we will take your student\'s grade, subjects and availability.</p><a class="btn" href="tel:9166642516">Call (916) 664-2516</a></div>';
+  } else {
+    tb.href=OFFER.tutoringForm; tb.setAttribute("onclick", NAV);
+    var src=OFFER.tutoringForm+(OFFER.tutoringForm.indexOf("?")>-1?"&":"?")+"embedded=true";
+    tf.innerHTML='<iframe src="'+esc(src)+'" title="Tutoring Interest Form" loading="lazy"></iframe>';
+  }
+
+  var bb=document.getElementById("band-btn");
+  if(isTBD(OFFER.bandPage)){ bb.classList.add("tbd"); bb.removeAttribute("href"); }
+  else { bb.href=OFFER.bandPage; bb.setAttribute("onclick", NAV); }
+
+  /* Program buttons: ask the Wix page to scroll to that program.
+     The page code (Dev Mode, Black Friday page) listens for these messages. */
+  document.querySelectorAll(".pbtn").forEach(function(b){
+    b.addEventListener("click", function(){
+      var el=document.getElementById("panel-"+b.getAttribute("data-panel"));
+      var y=Math.max(0, Math.round(el.getBoundingClientRect().top + window.pageYOffset) - 20);
+      try{ window.parent.postMessage({type:"bf-scroll", y:y},"*"); }catch(e){}
+    });
+  });
+})();
+</script>
+</body>
+</html>
