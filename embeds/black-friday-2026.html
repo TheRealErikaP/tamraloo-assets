@@ -249,16 +249,18 @@ html,body{overflow:hidden;}
 
    stripe:  the checkout link every class in that program uses. To give one
             class its own link, add it to perClass below.
-   tuition: the regular monthly tuition shown on each class card.
-   perClass: optional overrides keyed by the class name exactly as it is in
-            the schedule sheet, for example
-            "Group Piano": { tuition: "$99", stripe: "https://buy.stripe.com/..." }
+   tuition: shown on a class card only when that class has nothing in the
+            Tuition column of the schedule sheet. Each class's own price
+            belongs in that column ($115 for one-hour groups, $99 for 45 min).
+   perClass: optional Stripe link for one class, keyed by the class name
+            exactly as it is in the schedule sheet, for example
+            "Group Piano": { stripe: "https://buy.stripe.com/..." }
    Leave anything as "TBD" and it shows as a yellow highlight.
    ========================================================================= */
 var OFFER = {
-  music:   { stripe: "TBD", tuition: "TBD" },
-  dance:   { stripe: "TBD", tuition: "TBD" },
-  theatre: { stripe: "TBD", tuition: "TBD" },
+  music:   { stripe: "TBD", tuition: "$99 to $115" },
+  dance:   { stripe: "TBD", tuition: "$99 to $115" },
+  theatre: { stripe: "TBD", tuition: "$99 to $115" },
   perClass: {},
   tutoringForm: "TBD",
   bandPage: "https://mailchi.mp/8a80f9b15fab/january-2027-first-access-final"
@@ -281,57 +283,57 @@ var OFFER = {
 
   /* Built-in copy of the schedule (Nov 3, 2026) in case the sheet can't load */
   var FALLBACK = [
-["Program", "Section", "Class", "Age", "Teacher", "Day", "Time", "Show"],
-["Dance & Theatre", "Ballet", "Ballet/Tumble", "3-5", "Miss Anna", "Thursday", "9:15 AM", "Yes"],
-["Dance & Theatre", "Ballet", "Ballet/Tap", "2.5-4", "Miss Anna", "Thursday", "10:00 AM", "Yes"],
-["Dance & Theatre", "Ballet", "Ballet/Tap", "4-6", "Miss Anna", "Thursday", "3:00 PM", "Yes"],
-["Dance & Theatre", "Ballet", "Ballet/Tap", "3-5", "Miss Grace", "Saturday", "10:15 AM", "Yes"],
-["Dance & Theatre", "Ballet", "Ballet/Tap", "6-8", "Miss Grace", "Saturday", "11:00 AM", "Yes"],
-["Dance & Theatre", "Ballet", "Ballet I", "7-10", "Miss Grace", "Wednesday", "5:30 PM", "Yes"],
-["Dance & Theatre", "Ballet", "Ballet I/II", "7-10", "Miss Grace", "Monday", "6:00 PM", "Yes"],
-["Dance & Theatre", "Ballet", "Pre-Teen Ballet", "11-13", "Miss Grace", "Wednesday", "6:15 PM", "Yes"],
-["Dance & Theatre", "Ballet", "High School Ballet", "High School", "Miss Grace", "Wednesday", "7:00 PM", "Yes"],
-["Dance & Theatre", "Ballet", "Adult Ballet I/II", "18+", "Miss Grace", "Monday", "7:00 PM", "Yes"],
-["Dance & Theatre", "Jazz", "Jazz/Tap", "6-8", "Miss Anna", "Thursday", "3:45 PM", "Yes"],
-["Dance & Theatre", "Jazz", "Pre-Teen Jazz", "9-11", "Miss Sara", "Tuesday", "5:30 PM", "Yes"],
-["Dance & Theatre", "Jazz", "Jazz II", "11+", "Nat Q", "Tuesday", "3:30 PM", "Yes"],
-["Dance & Theatre", "Jazz", "Musical Theatre Jazz", "12-14", "Nat Q", "Thursday", "4:30 PM", "Yes"],
-["Dance & Theatre", "Jazz", "Musical Theatre Jazz", "High School", "Nat Q", "Tuesday", "6:30 PM", "Yes"],
-["Dance & Theatre", "Tiny & Hip Hop", "Tiny Movers", "T-2.5", "Miss Anna", "Wednesday", "10:00 AM", "Yes"],
-["Dance & Theatre", "Tiny & Hip Hop", "Hip Hop/Tumble", "3-5", "Miss Anna", "Wednesday", "9:15 AM", "Yes"],
-["Dance & Theatre", "Tiny & Hip Hop", "Hip Hop/Tumbling", "4-6", "Miss Grace", "Monday", "5:00 PM", "Yes"],
-["Dance & Theatre", "Tiny & Hip Hop", "Hip Hop/Funk", "7-10", "Miss Grace", "Monday", "4:15 PM", "Yes"],
-["Dance & Theatre", "Tiny & Hip Hop", "Hip Hop/Funk", "11-12", "Miss Grace", "Wednesday", "4:45 PM", "Yes"],
-["Dance & Theatre", "Tiny & Hip Hop", "Hip Hop", "12-14 (Jr. High) ", "Miss Madi", "Wednesday", "4:30 PM", "Yes"],
-["Dance & Theatre", "Tiny & Hip Hop", "High School Hip Hop", "14-18", "Miss Madi", "Wednesday", "6:30 PM", "Yes"],
-["Dance & Theatre", "Tap ", "Adult Tap", "18+", "Nat Q", "Tuesday", "5:30 PM", "Yes"],
-["Dance & Theatre", "Tap", "Pre-Teen Tap Technique", "9-11", "Miss Madi", "Wednesday", "5:30 PM", "Yes"],
-["Dance & Theatre", "Tap ", "Tap I/II", "12-14", "Nat Q", "Tuesday", "4:30 PM", "Yes"],
-["Dance & Theatre", "Tap ", "Teen Tap", "14-18", "Nat Q", "Thursday", "5:30 PM", "Yes"],
-["Dance & Theatre", "Theatre", "Storybook Stars", "5-8", "Miss McKenna", "Friday", "5:00 PM", "Yes"],
-["Dance & Theatre", "Theatre", "Theatre Lab", "9-11", "Miss McKenna", "Monday", "4:30 PM", "Yes"],
-["Music", "Theory & Production", "Audio Engineering A/B ", "13+", "Mr Daniel", "Thursday", "4:15 PM", "Yes"],
-["Music", "Theory & Production", "Audio Engineering A/B ", "13+", "Mr Daniel", "Friday", "4:15 PM", "Yes"],
-["Music", "Violin", "Ensemble", "5+", "Mr. Babak", "Thursday", "7:00 PM", "Yes"],
-["Music", "Voice", "Group Voice", "5-8", "Miss McKenna", "Wednesday", "5:00 PM", "Yes"],
-["Music", "Voice", "Group Voice", "9-12", "Miss Sara", "Tuesday", "6:30", "Yes"],
-["Music", "Voice", "Group Voice", "13-18", "Miss Rose", "Tuesday", "4:30 PM", "Yes"],
-["Music", "Instruments & Band", "Rhythm Percussion", "5+", "Mr Carter", "Monday", "3:30 PM", ""],
-["Music", "Instruments & Band", "Beginner Percussion", "8+ ", "Mr Daniel", "Monday", "5:45 PM", "Yes"],
-["Music", "Instruments & Band", "Intermediate Percussion", "11+", "Mr Daniel", "Monday", "6:45 PM", "Yes"],
-["Music", "Instruments & Band", "Group Piano", "6-10", "Mr David", "Monday", "2:30 PM", "Yes"],
-["Music", "Instruments & Band", "Group Piano", "11+", "Mr David", "Wednesday", "4:00 PM", "Yes"],
-["Music", "Instruments & Band", "Group Piano", "5-8", "Mr Daniel", "Thursday", "5:00 PM", "Yes"],
-["Music", "Instruments & Band", "Beginner Guitar", "9-12", "Mr Sam", "Tuesday", "4:00 PM", "Yes"],
-["Music", "Instruments & Band", "Inter/Advanced Guitar", "12-17", "Miss Kaylee", "Tuesday", "5:00 PM", "Yes"],
-["Music", "Instruments & Band", "Jr. High Country Band", "10-13", "Miss Kaylee", "Tuesday ", "6:00 PM", "Yes"],
-["Music", "Instruments & Band", "Country Band", "14-17", "Miss Kaylee", "Tuesday", "7:00 PM", ""],
-["Music", "Instruments & Band", "Jr. Band", "9-12", "Mr. Daniel", "Wednesday", "5:00", "Yes"],
-["Music", "Instruments & Band", "All Girl Rock Band", "13-18", "Miss Rose", "Monday", "4:30 PM", "Yes"],
-["Music", "Instruments & Band", "David's Rock Band", "13-18", "Mr David G", "Thursday", "5:00 PM", "Yes"],
-["Music", "Exploratory Music", "Mommy and Me ", "6 mos- 3", "Miss Kaylee", "Tuesday", "10:00 AM", "Yes"],
-["Music", "Exploratory Music", "Early Music", "4-6", "Miss Kaylee", "Tuesday ", "11:00 AM", "Yes"],
-["Music", "Exploratory Music", "Homeschool Music", "8-12", "Miss Kaylee", "Thursday", "10:00 AM", "Yes"]
+["Program", "Section", "Class", "Age", "Teacher", "Day", "Time", "Show", "Tuition"],
+["Dance & Theatre", "Ballet", "Ballet/Tumble", "3-5", "Miss Anna", "Thursday", "9:15 AM", "Yes", ""],
+["Dance & Theatre", "Ballet", "Ballet/Tap", "2.5-4", "Miss Anna", "Thursday", "10:00 AM", "Yes", "$99"],
+["Dance & Theatre", "Ballet", "Ballet/Tap", "4-6", "Miss Anna", "Thursday", "3:00 PM", "Yes", "$99"],
+["Dance & Theatre", "Ballet", "Ballet/Tap", "3-5", "Miss Grace", "Saturday", "10:15 AM", "Yes", "$99"],
+["Dance & Theatre", "Ballet", "Ballet/Tap", "6-8", "Miss Grace", "Saturday", "11:00 AM", "Yes", ""],
+["Dance & Theatre", "Ballet", "Ballet I", "7-10", "Miss Grace", "Wednesday", "5:30 PM", "Yes", "$99"],
+["Dance & Theatre", "Ballet", "Ballet I/II", "7-10", "Miss Grace", "Monday", "6:00 PM", "Yes", "$99"],
+["Dance & Theatre", "Ballet", "Pre-Teen Ballet", "11-13", "Miss Grace", "Wednesday", "6:15 PM", "Yes", ""],
+["Dance & Theatre", "Ballet", "High School Ballet", "High School", "Miss Grace", "Wednesday", "7:00 PM", "Yes", ""],
+["Dance & Theatre", "Ballet", "Adult Ballet I/II", "18+", "Miss Grace", "Monday", "7:00 PM", "Yes", "$115"],
+["Dance & Theatre", "Jazz", "Jazz/Tap", "6-8", "Miss Anna", "Thursday", "3:45 PM", "Yes", "$99"],
+["Dance & Theatre", "Jazz", "Pre-Teen Jazz", "9-11", "Miss Sara", "Tuesday", "5:30 PM", "Yes", ""],
+["Dance & Theatre", "Jazz", "Jazz II", "11+", "Nat Q", "Tuesday", "3:30 PM", "Yes", "$115"],
+["Dance & Theatre", "Jazz", "Musical Theatre Jazz", "12-14", "Nat Q", "Thursday", "4:30 PM", "Yes", "$115"],
+["Dance & Theatre", "Jazz", "Musical Theatre Jazz", "High School", "Nat Q", "Tuesday", "6:30 PM", "Yes", "$115"],
+["Dance & Theatre", "Tiny & Hip Hop", "Tiny Movers", "T-2.5", "Miss Anna", "Wednesday", "10:00 AM", "Yes", "$99"],
+["Dance & Theatre", "Tiny & Hip Hop", "Hip Hop/Tumble", "3-5", "Miss Anna", "Wednesday", "9:15 AM", "Yes", "$99"],
+["Dance & Theatre", "Tiny & Hip Hop", "Hip Hop/Tumbling", "4-6", "Miss Grace", "Monday", "5:00 PM", "Yes", "$99"],
+["Dance & Theatre", "Tiny & Hip Hop", "Hip Hop/Funk", "7-10", "Miss Grace", "Monday", "4:15 PM", "Yes", "$99"],
+["Dance & Theatre", "Tiny & Hip Hop", "Hip Hop/Funk", "11-12", "Miss Grace", "Wednesday", "4:45 PM", "Yes", ""],
+["Dance & Theatre", "Tiny & Hip Hop", "Hip Hop", "12-14 (Jr. High) ", "Miss Madi", "Wednesday", "4:30 PM", "Yes", ""],
+["Dance & Theatre", "Tiny & Hip Hop", "High School Hip Hop", "14-18", "Miss Madi", "Wednesday", "6:30 PM", "Yes", ""],
+["Dance & Theatre", "Tap ", "Adult Tap", "18+", "Nat Q", "Tuesday", "5:30 PM", "Yes", "$115"],
+["Dance & Theatre", "Tap", "Pre-Teen Tap Technique", "9-11", "Miss Madi", "Wednesday", "5:30 PM", "Yes", ""],
+["Dance & Theatre", "Tap ", "Tap I/II", "12-14", "Nat Q", "Tuesday", "4:30 PM", "Yes", ""],
+["Dance & Theatre", "Tap ", "Teen Tap", "14-18", "Nat Q", "Thursday", "5:30 PM", "Yes", ""],
+["Dance & Theatre", "Theatre", "Storybook Stars", "5-8", "Miss McKenna", "Friday", "5:00 PM", "Yes", ""],
+["Dance & Theatre", "Theatre", "Theatre Lab", "9-11", "Miss McKenna", "Monday", "4:30 PM", "Yes", "$99"],
+["Music", "Theory & Production", "Audio Engineering A/B ", "13+", "Mr Daniel", "Thursday", "4:15 PM", "Yes", ""],
+["Music", "Theory & Production", "Audio Engineering A/B ", "13+", "Mr Daniel", "Friday", "4:15 PM", "Yes", ""],
+["Music", "Violin", "Ensemble", "5+", "Mr. Babak", "Thursday", "7:00 PM", "Yes", ""],
+["Music", "Voice", "Group Voice", "5-8", "Miss McKenna", "Wednesday", "5:00 PM", "Yes", "$99"],
+["Music", "Voice", "Group Voice", "9-12", "Miss Sara", "Tuesday", "6:30", "Yes", "$115"],
+["Music", "Voice", "Group Voice", "13-18", "Miss Rose", "Tuesday", "4:30 PM", "Yes", ""],
+["Music", "Instruments & Band", "Rhythm Percussion", "5+", "Mr Carter", "Monday", "3:30 PM", "", ""],
+["Music", "Instruments & Band", "Beginner Percussion", "8+ ", "Mr Daniel", "Monday", "5:45 PM", "Yes", "$99"],
+["Music", "Instruments & Band", "Intermediate Percussion", "11+", "Mr Daniel", "Monday", "6:45 PM", "Yes", ""],
+["Music", "Instruments & Band", "Group Piano", "6-10", "Mr David", "Monday", "2:30 PM", "Yes", "$115"],
+["Music", "Instruments & Band", "Group Piano", "11+", "Mr David", "Wednesday", "4:00 PM", "Yes", "$99"],
+["Music", "Instruments & Band", "Group Piano", "5-8", "Mr Daniel", "Thursday", "5:00 PM", "Yes", "$99"],
+["Music", "Instruments & Band", "Beginner Guitar", "9-12", "Mr Sam", "Tuesday", "4:00 PM", "Yes", ""],
+["Music", "Instruments & Band", "Inter/Advanced Guitar", "12-17", "Miss Kaylee", "Tuesday", "5:00 PM", "Yes", ""],
+["Music", "Instruments & Band", "Jr. High Country Band", "10-13", "Miss Kaylee", "Tuesday ", "6:00 PM", "Yes", ""],
+["Music", "Instruments & Band", "Country Band", "14-17", "Miss Kaylee", "Tuesday", "7:00 PM", "", ""],
+["Music", "Instruments & Band", "Jr. Band", "9-12", "Mr. Daniel", "Wednesday", "5:00", "Yes", "$115"],
+["Music", "Instruments & Band", "All Girl Rock Band", "13-18", "Miss Rose", "Monday", "4:30 PM", "Yes", "$115"],
+["Music", "Instruments & Band", "David's Rock Band", "13-18", "Mr David G", "Thursday", "5:00 PM", "Yes", "$115"],
+["Music", "Exploratory Music", "Mommy and Me ", "6 mos- 3", "Miss Kaylee", "Tuesday", "10:00 AM", "Yes", ""],
+["Music", "Exploratory Music", "Early Music", "4-6", "Miss Kaylee", "Tuesday ", "11:00 AM", "Yes", ""],
+["Music", "Exploratory Music", "Homeschool Music", "8-12", "Miss Kaylee", "Thursday", "10:00 AM", "Yes", ""]
   ];
 
   /* every link to another page opens in a new tab */
@@ -383,7 +385,7 @@ var OFFER = {
       html += '<div class="sched-sec"><div class="sched-sechead">'+esc(sec)+'</div><div class="sched-grid">';
       map[sec].forEach(function(row){
         var cls=get(row,"class"), pc=OFFER.perClass[cls]||{};
-        var link=pc.stripe||o.stripe, tu=pc.tuition||o.tuition;
+        var link=pc.stripe||o.stripe, tu=get(row,"tuition")||pc.tuition||o.tuition;
         var tuHtml = isTBD(tu) ? '<span class="tbd">TBD</span>' : esc(tu)+'/month';
         var btn = isTBD(link) ? '<span class="enroll off tbd">Link coming soon</span>'
                               : '<a class="enroll" href="'+esc(link)+'" target="_blank" rel="noopener">Enroll for $49</a>';
