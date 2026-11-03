@@ -329,7 +329,8 @@ var OFFER = {
 ["Music", "Exploratory Music", "Homeschool Music", "8-12", "Miss Kaylee", "Thursday", "10:00 AM", "Yes"]
   ];
 
-  var NAV = "try{window.top.location.href=this.href;}catch(e){window.location.href=this.href;}return false;";
+  /* every link to another page opens in a new tab */
+  function newTab(a){ a.setAttribute("target","_blank"); a.setAttribute("rel","noopener"); }
   function isTBD(v){ return !v || String(v).trim().toUpperCase() === "TBD"; }
   function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
   function tidy(s){ return String(s||"").replace(/\s+/g," ").trim(); }
@@ -366,8 +367,8 @@ var OFFER = {
 
     var html = '<div class="panel-top"><div><h3 class="panel-h">'+esc(cfg.title)+'</h3>'
       + '<p class="panel-sub">Participating January group classes. <b>Your first month is $49</b> and the enrollment fee is waived.</p></div>'
-      + '<div class="panel-links"><a class="plink" href="'+SCHEDULE_PAGE+'" onclick="'+NAV+'">See the full class schedule</a>'
-      + '<a class="plink" href="'+cfg.page+'" onclick="'+NAV+'">'+esc(cfg.pageLabel)+'</a></div></div>';
+      + '<div class="panel-links"><a class="plink" href="'+SCHEDULE_PAGE+'" target="_blank" rel="noopener">See the full class schedule</a>'
+      + '<a class="plink" href="'+cfg.page+'" target="_blank" rel="noopener">'+esc(cfg.pageLabel)+'</a></div></div>';
 
     if(!sections.length){
       return html + '<p class="sched-empty">Classes for this program are being finalized. Call (916) 664-2516 and we will help you find a spot.</p>';
@@ -380,7 +381,7 @@ var OFFER = {
         var link=pc.stripe||o.stripe, tu=pc.tuition||o.tuition;
         var tuHtml = isTBD(tu) ? '<span class="tbd">TBD</span>' : esc(tu)+'/month';
         var btn = isTBD(link) ? '<span class="enroll off tbd">Link coming soon</span>'
-                              : '<a class="enroll" href="'+esc(link)+'" onclick="'+NAV+'">Enroll for $49</a>';
+                              : '<a class="enroll" href="'+esc(link)+'" target="_blank" rel="noopener">Enroll for $49</a>';
         html += '<div class="sched-card">'
           + '<div class="sched-cls">'+esc(cls)+' <span class="sched-age">(Age '+esc(get(row,"age"))+')</span></div>'
           + '<div class="sched-teach">'+esc(get(row,"teacher"))+'</div>'
@@ -405,19 +406,19 @@ var OFFER = {
 
   /* tutoring form: embed if set, call button backup */
   var tb=document.getElementById("tut-btn"), tf=document.getElementById("tut-form");
-  document.getElementById("tut-page").setAttribute("onclick", NAV);
+  newTab(document.getElementById("tut-page"));
   if(isTBD(OFFER.tutoringForm)){
     tb.classList.add("tbd"); tb.removeAttribute("href");
     tf.innerHTML='<div class="formfallback"><p><span class="tbd">Tutoring form link TBD</span></p><p>Until the form is ready, call the studio and we will take your student\'s grade, subjects and availability.</p><a class="btn" href="tel:9166642516">Call (916) 664-2516</a></div>';
   } else {
-    tb.href=OFFER.tutoringForm; tb.setAttribute("onclick", NAV);
+    tb.href=OFFER.tutoringForm; newTab(tb);
     var src=OFFER.tutoringForm+(OFFER.tutoringForm.indexOf("?")>-1?"&":"?")+"embedded=true";
     tf.innerHTML='<iframe src="'+esc(src)+'" title="Tutoring Interest Form" loading="lazy"></iframe>';
   }
 
   var bb=document.getElementById("band-btn");
   if(isTBD(OFFER.bandPage)){ bb.classList.add("tbd"); bb.removeAttribute("href"); }
-  else { bb.href=OFFER.bandPage; bb.setAttribute("onclick", NAV); }
+  else { bb.href=OFFER.bandPage; newTab(bb); }
 
   /* Program buttons: ask the Wix page to scroll to that program.
      The page code (Dev Mode, Black Friday page) listens for these messages. */
