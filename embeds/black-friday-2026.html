@@ -9,12 +9,12 @@
 <!-- =========================================================================
      BLACK FRIDAY 2026 LANDING PAGE  (Wix slug: /black-friday)
 
-     Copy is from the Website Edits doc, Black Friday Necessities tab, with
-     theatre added alongside music and dance.
+     Copy is from the Website Edits doc, Black Friday Necessities tab.
 
      CLASS LISTS come live from the Tamraloo class schedule Google Sheet (the
      same sheet that runs the Lesson Calendar page). Show = No rows are hidden
-     and band classes are left out because bands are not part of the offer.
+     and band classes plus anything on the January First Access page (Storybook
+     Stars, Theatre Lab) are left out because they are not part of the offer.
      Edit the sheet and this page follows.
 
      Links and tuition live in the OFFER block in the script at the bottom.
@@ -49,7 +49,7 @@ a{color:inherit;text-decoration:none;}
 .deal-line{font-family:var(--dp);font-size:1.25rem;font-weight:700;font-style:italic;color:var(--ink);margin-bottom:16px;}
 .deal-pills{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
 .deal-pills b{font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:7px 13px;border-radius:30px;color:#fff;}
-.deal-pills b:nth-child(1){background:var(--blue);}.deal-pills b:nth-child(2){background:var(--mag);}.deal-pills b:nth-child(3){background:var(--green);}.deal-pills b:nth-child(4){background:var(--or);}
+.deal-pills b:nth-child(1){background:var(--blue);}.deal-pills b:nth-child(2){background:var(--mag);}.deal-pills b:nth-child(3){background:var(--or);}
 .deal-waive{display:inline-block;background:var(--gold);color:var(--ink);font-weight:700;font-size:0.85rem;padding:8px 16px;border-radius:4px;margin-bottom:16px;}
 .deal-fine{font-size:0.74rem;color:var(--tm);line-height:1.6;max-width:400px;margin:0 auto;}
 .deal-fine + .deal-fine{margin-top:6px;}
@@ -75,7 +75,7 @@ a{color:inherit;text-decoration:none;}
 .pbtns{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:32px;}
 .pbtn{font-family:var(--bd2);font-size:0.92rem;font-weight:700;color:var(--ink);background:#fff;border:2px solid var(--ink);border-radius:6px;padding:16px 12px;cursor:pointer;transition:background 0.15s,color 0.15s;}
 .pbtn:hover{background:rgba(26,21,32,0.05);}
-.pbtn.music:hover,.pbtn.music:focus{background:var(--blue);border-color:var(--blue);color:#fff;}.pbtn.dance:hover,.pbtn.dance:focus{background:var(--mag);border-color:var(--mag);color:#fff;}.pbtn.theatre:hover,.pbtn.theatre:focus{background:var(--green);border-color:var(--green);color:#fff;}.pbtn.tutoring:hover,.pbtn.tutoring:focus{background:var(--or);border-color:var(--or);color:#fff;}
+.pbtn.music:hover,.pbtn.music:focus{background:var(--blue);border-color:var(--blue);color:#fff;}.pbtn.dance:hover,.pbtn.dance:focus{background:var(--mag);border-color:var(--mag);color:#fff;}.pbtn.bandbtn{display:block;text-align:center;border:2px dashed var(--blue);color:var(--blue);background:transparent;}.pbtn.bandbtn small{color:var(--tm);}.pbtn.bandbtn:hover{background:var(--blue);border-style:solid;color:#fff;}.pbtn.bandbtn:hover small{color:#fff;}.pbtn.tutoring:hover,.pbtn.tutoring:focus{background:var(--or);border-color:var(--or);color:#fff;}
 .pbtn small{display:block;font-size:0.66rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;margin-top:4px;color:var(--mag);}
 .pbtn:hover small,.pbtn:focus small{color:#fff;}
 
@@ -154,13 +154,13 @@ html,body{overflow:hidden;}
 
 <section class="bhero" aria-label="Black Friday offer">
   <div class="bhero-inner">
-    <div class="deal" role="img" aria-label="Black Friday at Tamraloo. First month $49. Start a new group class this January. Music, dance, theatre and tutoring pods. Enrollment fee waived.">
+    <div class="deal" role="img" aria-label="Black Friday at Tamraloo. First month $49. Start a new group class this January. Music, dance and tutoring pods. Enrollment fee waived.">
       <div class="deal-top">Black Friday at Tamraloo</div>
       <div class="deal-body">
         <div class="deal-k">First Month</div>
         <div class="deal-price"><span>$</span>49</div>
         <div class="deal-line">Start a new group class this January!</div>
-        <div class="deal-pills"><b>Music</b><b>Dance</b><b>Theatre</b><b>Tutoring Pods</b></div>
+        <div class="deal-pills"><b>Music</b><b>Dance</b><b>Tutoring Pods</b></div>
         <div class="deal-waive">Enrollment fee waived</div>
         <p class="deal-fine">Three-month commitment. Regular tuition begins in month two.</p>
         <p class="deal-fine">Cancel before April 1, 2027, and the waived $60 enrollment fee plus the first-month tuition discount will be due in full.</p>
@@ -171,7 +171,7 @@ html,body{overflow:hidden;}
     <div>
       <span class="hero-eyebrow">January 2027 &nbsp;&middot;&nbsp; Lincoln, CA</span>
       <h1 class="hero-h1">New year. New possibilities.<br><em>First month just $49!</em></h1>
-      <p class="hero-sub">Give your student something to look forward to this January! Explore participating group music, dance, and theatre classes, or tell us what your student needs in a tutoring pod.</p>
+      <p class="hero-sub">Give your student something to look forward to this January! Explore participating group music and dance classes, or tell us what your student needs in a tutoring pod.</p>
       <p class="hero-terms"><b>Your first month is $49, with the enrollment fee waived.</b> A three-month commitment applies. Regular monthly tuition begins in month two. If you cancel before April 1, 2027, the waived $60 enrollment fee and the difference between your $49 first month and the program's regular monthly tuition will be due in full.</p>
       <a href="tel:9166642516" class="hero-tel">Questions? Call (916) 664-2516</a>
     </div>
@@ -187,14 +187,13 @@ html,body{overflow:hidden;}
     <div class="pbtns">
       <button class="pbtn music" data-panel="music">Explore Music Classes<small>$49 first month</small></button>
       <button class="pbtn dance" data-panel="dance">Explore Dance Classes<small>$49 first month</small></button>
-      <button class="pbtn theatre" data-panel="theatre">Explore Theatre Classes<small>$49 first month</small></button>
       <button class="pbtn tutoring" data-panel="tutoring">Find a Tutoring Pod<small>$49 first month</small></button>
+      <a class="pbtn bandbtn" id="band-btn-top" href="#">Explore Our Band Programs<small>Separate pricing</small></a>
     </div>
 
     <div class="panels" id="panels">
       <div class="panel" id="panel-music"></div>
       <div class="panel" id="panel-dance"></div>
-      <div class="panel" id="panel-theatre"></div>
 
       <div class="panel" id="panel-tutoring">
         <div class="tut">
@@ -212,8 +211,8 @@ html,body{overflow:hidden;}
 
     <div class="band">
       <div>
-        <h3>Looking for a band?</h3>
-        <p>Our band programs have their own pricing and commitments and are not part of the $49 offer. See the band page for details and enrollment.</p>
+        <h3>Band programs, Storybook Stars and Theatre Lab</h3>
+        <p>These have their own January enrollment, pricing and commitments and are not part of the $49 offer. See the band programs page for details and enrollment.</p>
       </div>
       <a id="band-btn" href="#">Explore Our Band Programs</a>
     </div>
@@ -224,7 +223,7 @@ html,body{overflow:hidden;}
   <div class="section-inner">
     <span class="eyebrow" style="color:var(--blue);">Good to Know</span>
     <h2 class="h2">Terms &amp; Conditions</h2>
-    <p>The Black Friday offer applies to one new enrollment per student in a participating January group music class, dance class, theatre class, or tutoring pod. The first month is $49, and the standard $60 enrollment fee is waived.</p>
+    <p>The Black Friday offer applies to one new enrollment per student in a participating January group music class, dance class, or tutoring pod. The first month is $49, and the standard $60 enrollment fee is waived.</p>
     <p>Enrollment requires a commitment to the first three consecutive months. Regular monthly tuition begins in month two. <b>This special rate is our way of helping your family get started with a full season of learning and growth. If you cancel before April 1, 2027, the waived $60 enrollment fee and the difference between your $49 promotional month and the program's regular monthly tuition will be due in full.</b> After the initial three-month commitment, enrollment continues month-to-month under Tamraloo Studios' regular tuition, cancellation, and withdrawal policies.</p>
     <p>Offer does not apply to current class enrollments, private lessons, camps, productions, or band programs advertised separately. It is nontransferable and cannot be combined with another introductory offer.</p>
     <p>Classes and tutoring pods are subject to availability and minimum enrollment. Tutoring interest form submission does not reserve a space or complete enrollment. Tutoring billing begins only after a compatible pod of at least three students is confirmed and the family has completed enrollment.</p>
@@ -260,7 +259,6 @@ html,body{overflow:hidden;}
 var OFFER = {
   music:   { stripe: "TBD", tuition: "$99 to $115" },
   dance:   { stripe: "TBD", tuition: "$99 to $115" },
-  theatre: { stripe: "TBD", tuition: "$99 to $115" },
   perClass: {},
   tutoringForm: "TBD",
   bandPage: "https://mailchi.mp/8a80f9b15fab/january-2027-first-access-final"
@@ -271,14 +269,15 @@ var OFFER = {
   /* Same published sheet the Lesson Calendar page reads */
   var SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRI9ZoJ05UPVnbIWPpER_ltpKE5BBfLzTNKsTQV5hhYEzBd0taYfTa5Emqeva8hvdI-C-n7TbjJdgRv/pub?gid=1471313473&single=true&output=csv";
   var SCHEDULE_PAGE = "https://www.tamraloo.com/lesson-calendar";
+  /* on the January First Access page with their own pricing, so never in the $49 lists */
+  var EXCLUDE = ["storybook stars","theatre lab"];
 
   var PILLARS = {
     music:   { title:"Group Music Classes",   acc:"var(--blue)",  page:"https://www.tamraloo.com/music-lessons",           pageLabel:"About our music program",
                match:function(p,s){ return p==="music"; } },
     dance:   { title:"Group Dance Classes",   acc:"var(--mag)",   page:"https://www.tamraloo.com/dance-lessons-lincoln-ca", pageLabel:"About our dance program",
-               match:function(p,s){ return p==="dance & theatre" && s!=="theatre"; } },
-    theatre: { title:"Group Theatre Classes", acc:"var(--green)", page:"https://www.tamraloo.com/theatre",                  pageLabel:"About our theatre program",
-               match:function(p,s){ return p==="dance & theatre" && s==="theatre"; } }
+               match:function(p,s){ return p==="dance & theatre" && s!=="theatre"; } }
+    /* theatre classes are on the January First Access page, not the $49 offer */
   };
 
   /* Built-in copy of the schedule (Nov 3, 2026) in case the sheet can't load */
@@ -367,6 +366,7 @@ var OFFER = {
       if(!cfg.match(prog, sec.toLowerCase())) continue;
       if((get(row,"show")||"yes").toLowerCase()==="no") continue;
       if(/band/i.test(get(row,"class"))) continue;           /* bands are not part of the offer */
+      if(EXCLUDE.indexOf(get(row,"class").toLowerCase())>-1) continue;
       sec = sec || "Classes";
       if(!map[sec]){ map[sec]=[]; sections.push(sec); }
       map[sec].push(row);
@@ -402,7 +402,7 @@ var OFFER = {
   }
 
   function render(matrix){
-    ["music","dance","theatre"].forEach(function(k){ document.getElementById("panel-"+k).innerHTML = buildPanel(matrix,k); });
+    ["music","dance"].forEach(function(k){ document.getElementById("panel-"+k).innerHTML = buildPanel(matrix,k); });
   }
 
   render(FALLBACK);
@@ -423,9 +423,11 @@ var OFFER = {
     tf.innerHTML='<iframe src="'+esc(src)+'" title="Tutoring Interest Form" loading="lazy"></iframe>';
   }
 
-  var bb=document.getElementById("band-btn");
-  if(isTBD(OFFER.bandPage)){ bb.classList.add("tbd"); bb.removeAttribute("href"); }
-  else { bb.href=OFFER.bandPage; newTab(bb); }
+  ["band-btn","band-btn-top"].forEach(function(id){
+    var bb=document.getElementById(id);
+    if(isTBD(OFFER.bandPage)){ bb.classList.add("tbd"); bb.removeAttribute("href"); }
+    else { bb.href=OFFER.bandPage; newTab(bb); }
+  });
 
   /* Program buttons: ask the Wix page to scroll to that program.
      The page code (Dev Mode, Black Friday page) listens for these messages. */
